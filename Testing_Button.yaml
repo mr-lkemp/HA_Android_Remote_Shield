@@ -1,0 +1,13 @@
+type: vertical-stack
+cards:
+  - type: grid
+    columns: 3
+    cards:
+      - type: button
+        icon: mdi:arrow-up-thick
+        name: UP
+- action: androidtv.adb_command
+  target:
+    entity_id: media_player.android_tv_192_168_50_96
+  data:
+    command: UP
