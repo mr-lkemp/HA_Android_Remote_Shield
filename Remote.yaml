@@ -91,8 +91,8 @@ cards:
           data:  
             command: "BACK"
 
-      type: button
-        icon: mdi:
+     type: button
+        icon: mdi:menu
         name: Menu
         tap_action:
           action: call-service
