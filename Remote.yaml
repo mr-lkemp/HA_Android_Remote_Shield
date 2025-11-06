@@ -1,0 +1,138 @@
+type: vertical-stack
+cards:
+  - type: grid
+    columns: 3
+    cards:
+      - type: button
+        icon: mdi:power
+        name: Power
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "POWER"
+
+      - type: button
+        icon: mdi:home
+        name: Home
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "HOME"
+
+      - type: button
+        icon: mdi:arrow-left-bold
+        name: Left
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "LEFT"
+
+      - type: button
+        icon: mdi:arrow-up-bold
+        name: Up
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "UP"
+
+      - type: button
+        icon: mdi:checkbox-blank-circle
+        name: Select
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "CENTER"
+
+      - type: button
+        icon: mdi:arrow-right-bold
+        name: Right
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "RIGHT"
+
+      - type: button
+        icon: mdi:arrow-down-bold
+        name: Down
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "DOWN"
+
+      - type: button
+        icon: mdi:arrow-u-left-top
+        name: Back
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "BACK"
+
+      type: button
+        icon: mdi:
+        name: Menu
+        tap_action:
+          action: call-service
+          service: androidtv.adb_command
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            command: "Menu"      
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        icon: mdi:netflix
+        name: Netflix
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            source: "com.netflix.ninja"
+
+      - type: button
+        icon: mdi:youtube
+        name: YouTube
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            source: "com.google.android.youtube.tv"
+
+      - type: button
+        icon: mdi:stop
+        name: Stop Netflix
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          target:
+            entity_id: media_player.android_tv_192_168_50_96
+          data:  
+            source: "!com.netflix.ninja"
